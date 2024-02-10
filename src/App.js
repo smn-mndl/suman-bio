@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import HomePage from "./js/scenes/home/HomePage";
+import Navbar from "./js/components/navbar/Navbar";
+import AboutMe from "./js/scenes/aboutme/AboutMe";
+import Resume from "./js/scenes/resume/Resume";
+import { useState } from "react";
+import Services from "./js/scenes/services/Services";
+import Contact from "./js/scenes/contact/Contact";
 
-function App() {
+import { Route, Routes } from "react-router-dom";
+
+const App = () => {
+  const [currentTab, setCurrentTab] = useState("");
+
+  const url = window.location.href;
+  const route = url.split("/")[3];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar currentTab={currentTab} setCurrentTab={setCurrentTab} />
+      {route === "resume" && (
+        <>
+          <a className="download-btn" href={"/SUMANMONDAL_CV.docx"} download>
+            <span>Download CV</span>
+          </a>
+        </>
+      )}
+      <main className={`app-content app-content-${route}`}>
+        <Routes>
+          <Route path="/about" element={<AboutMe />}></Route>
+          <Route path="/resume" element={<Resume />}></Route>
+          <Route path="/expertise" element={<Services />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/" element={<HomePage />}></Route>
+        </Routes>
+      </main>
+      <footer>© 2021. Created By Suman Mondal</footer>
+    </>
   );
-}
+};
 
 export default App;
