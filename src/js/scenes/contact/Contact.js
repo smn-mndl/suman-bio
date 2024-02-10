@@ -8,7 +8,7 @@ const Contact = () => {
   const [inputData, setInputData] = useState({ name: "", email: "", msg: "" });
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState({ err: false, errMsg: "" });
-  console.log('isError', isError)
+  console.log("isError", isError);
   const onClickHandler = async () => {
     const stateObj = JSON.parse(JSON.stringify(inputData));
     if (Object.values(stateObj).filter((each) => each).length === 3) {
@@ -37,12 +37,9 @@ const Contact = () => {
           reply_to: stateObj.email,
         };
         emailjs
-          .send(
-            "service_y8lploi",
-            temlplateID,
-            templateParams,
-            "user_W9W3PnPJNlwsJsLGALCDM"
-          )
+          .send("service_y8lploi", temlplateID, templateParams, {
+            publicKey: "WyyRZka49r7ametfA",
+          })
           .then(
             (result) => {
               console.log(result.text);
