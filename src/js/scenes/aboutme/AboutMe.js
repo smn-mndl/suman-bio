@@ -16,7 +16,7 @@ const AboutMe = () => {
           <br></br>
           I've worked at <a href="https://www.infosys.com/">Infosys</a> for 3 years as an junior web developer.
           <br></br>
-          Currently, I'm working at <a href="https://www.cognizant.com/us/en">Cognizant</a> as a React JS developer. I'm building micro-frontends for a variety of clients.
+          Currently, I'm working at <a href="https://www.cognizant.com/us/en">Cognizant</a> as a React JS developer. 
           <br></br>
           <br></br>
           <strong>Frontend Development - </strong> I primarily use React JS &

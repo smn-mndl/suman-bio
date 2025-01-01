@@ -14,10 +14,10 @@ const Resume = () => {
             <strong>
               <div>Indian Institue of Technology, Jodhpur, India</div>
             </strong>
-            <div>Aug, 2022 - Present</div>
+            <div>Aug, 2022 - Sep, 2024</div>
           </i>
           <br></br>
-          <div>Master's in Technology in Computational Data Science.</div>
+          <div>Master of Technology in Computational Data Science.</div>
           <hr></hr>
           <i>
             <strong>
@@ -27,7 +27,7 @@ const Resume = () => {
           </i>
 
           <br></br>
-          <div>Bachelor's in Technology in Mechanical Engineering.</div>
+          <div>Bachelor of Technology in Mechanical Engineering.</div>
         </p>
         <hr></hr>
         <p>

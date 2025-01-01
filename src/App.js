@@ -12,12 +12,14 @@ import { Route, Routes } from "react-router-dom";
 const App = () => {
   const [currentTab, setCurrentTab] = useState("");
 
+  const [dropdownOpen, setDropdownOpen] = useState(true);
+
   const url = window.location.href;
   const route = url.split("/")[3];
 
   return (
     <>
-      <Navbar currentTab={currentTab} setCurrentTab={setCurrentTab} />
+      <Navbar currentTab={currentTab} setCurrentTab={setCurrentTab} dropdownOpen = {dropdownOpen} setDropdownOpen = {setDropdownOpen}/>
       {route === "resume" && (
         <>
           <a className="download-btn" href={"/SUMANMONDAL_CV.docx"} download>
@@ -25,7 +27,7 @@ const App = () => {
           </a>
         </>
       )}
-      <main className={`app-content app-content-${route}`}>
+      <main className={`app-content app-content-${route} ${dropdownOpen ? 'dropdownOpenCss': 'dropdownOpenCss2'}`}>
         <Routes>
           <Route path="/about" element={<AboutMe />}></Route>
           <Route path="/resume" element={<Resume />}></Route>

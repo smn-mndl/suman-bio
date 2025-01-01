@@ -59,10 +59,20 @@
   // background-size: cover;
   // background-position: center;
   color: antiquewhite;
-  padding: 0 10px;
+  // padding: 0 10px;
+  width: 100%;
   z-index: 1;
-
+  transition: all .3s ease-in-out;;
   // animation: article-load 1s ease-in 1s;
+}
+.dropdownOpenCss {
+  width: calc(100vw - 200px);
+  left: 200px;
+  // transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+.dropdownOpenCss2 {
+  left: 0px;
 }
 footer {
   height: 40px;
@@ -85,8 +95,8 @@ footer {
   .app-content {
     position: absolute;
     top: 52px;
-    left: 200px;
-    width: calc(100vw - 200px);
+    // left: 200px;
+    // width: calc(100vw - 200px);
   }
   footer {
     position: absolute;
@@ -119,6 +129,7 @@ footer {
   justify-content: right;
   display: flex;
   margin-right: 15px;
+  margin-top: 10px;
   margin-bottom: 15px;
   text-decoration: unset;
   span{

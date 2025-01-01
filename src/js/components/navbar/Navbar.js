@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import { NAVBAR_CONFIG } from "./navbar-config";
 import "./Navbar.scss";
 
-const Navbar = ({ setCurrentTab, currentTab }) => {
+const Navbar = ({ setCurrentTab, currentTab, dropdownOpen, setDropdownOpen }) => {
   const windowWidth = window.innerWidth;
   const [toggleMenu, setToggleMenu] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(true);
+  
   useEffect(() => {
     window.addEventListener("resize", () => {
       // if()
