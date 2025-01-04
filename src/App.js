@@ -10,9 +10,10 @@ import Contact from "./js/scenes/contact/Contact";
 import { Route, Routes } from "react-router-dom";
 
 const App = () => {
+  const windowWidth = window.innerWidth;
   const [currentTab, setCurrentTab] = useState("");
 
-  const [dropdownOpen, setDropdownOpen] = useState(true);
+  const [dropdownOpen, setDropdownOpen] = useState(windowWidth > 499 ? true : false);
 
   const url = window.location.href;
   const route = url.split("/")[3];

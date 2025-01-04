@@ -4,19 +4,17 @@ import { Link } from "react-router-dom";
 import { NAVBAR_CONFIG } from "./navbar-config";
 import "./Navbar.scss";
 
-const Navbar = ({ setCurrentTab, currentTab, dropdownOpen, setDropdownOpen }) => {
+const Navbar = ({
+  setCurrentTab,
+  currentTab,
+  dropdownOpen,
+  setDropdownOpen,
+}) => {
   const windowWidth = window.innerWidth;
-  const [toggleMenu, setToggleMenu] = useState(false);
-  
+
   useEffect(() => {
     window.addEventListener("resize", () => {
-      // if()
       setDropdownOpen(false);
-      if (window.innerWidth > 499) {
-        setToggleMenu(false);
-      } else if (window.innerWidth < 499) {
-        setToggleMenu(true);
-      }
     });
   }, [windowWidth]);
   const navbarItems = () => {
@@ -42,7 +40,9 @@ const Navbar = ({ setCurrentTab, currentTab, dropdownOpen, setDropdownOpen }) =>
     return (
       <div
         className={
-          dropdownOpen && window.innerWidth > 699 ? "showToggleMenu side-nav" : "hideToggleMenu side-nav"
+          dropdownOpen && window.innerWidth > 499
+            ? "showToggleMenu side-nav"
+            : "hideToggleMenu side-nav"
         }
       >
         {navbarItems()}
@@ -51,22 +51,24 @@ const Navbar = ({ setCurrentTab, currentTab, dropdownOpen, setDropdownOpen }) =>
   };
   return (
     <nav className="navbar">
-      {toggleMenu ? (
-        <ul>{navbarItems()}</ul>
+      {window.innerWidth > 499 ? (
+        <>
+          <div className="navbar-header">
+            <div className="navbar-name">
+              <span>Suman Mondal</span>
+            </div>
+            <div
+              className="navbar-icon"
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+            >
+              {dropdownOpen ? <MenuFoldOutlined /> : <MenuUnfoldOutlined />}
+            </div>
+          </div>
+          {createSideNav()}
+        </>
       ) : (
-        <div className="navbar-header">
-          <div className="navbar-name">
-            <span>Suman Mondal</span>
-          </div>
-          <div
-            className="navbar-icon"
-            onClick={() => setDropdownOpen(!dropdownOpen)}
-          >
-            {dropdownOpen ? <MenuFoldOutlined /> : <MenuUnfoldOutlined />}
-          </div>
-        </div>
+        <ul>{navbarItems()}</ul>
       )}
-      {createSideNav()}
     </nav>
   );
 };
