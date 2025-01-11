@@ -14,20 +14,21 @@ const AboutMe = () => {
           provide a seamless and intuitive user experience.
           <br></br>
           <br></br>
-          I've worked at <a href="https://www.infosys.com/">Infosys</a> for 3 years as an junior web developer.
+          I've worked at <a href="https://www.infosys.com/">Infosys</a> for 3 years as an junior ReactJS developer.
           <br></br>
-          Currently, I'm working at <a href="https://www.cognizant.com/us/en">Cognizant</a> as a React JS developer. 
-          <br></br>
-          <br></br>
-          <strong>Frontend Development - </strong> I primarily use React JS &
-          JavaScript.
+          Currently, I'm working at <a href="https://www.cognizant.com/us/en">Cognizant</a> as a full-stack developer. 
           <br></br>
           <br></br>
-          <strong>Backend Development - </strong> Mainly used Node JS and
-          Express JS for microservices.
+          <strong>Frontend Development - </strong> ReactJS, JavaScript.
+          <br></br>
+          <br></br>
+          <strong>Backend Development - </strong> NodeJS, ExpressJS.
           <br></br>
           <br></br>
           <strong>Database - </strong> MongoDB.
+          <br></br>
+          <br></br>
+          <strong>Tools - </strong> Git, AWS.
         </p>
       </div>
     </div>
