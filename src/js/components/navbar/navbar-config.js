@@ -32,6 +32,11 @@ export const NAVBAR_CONFIG = [
   //   url: "/portfolio",
   // },
   {
+    disp: "Blog",
+    url: "/blog",
+    icon: <FolderOpenOutlined />,
+  },
+  {
     disp: "Contact",
     url: "/contact",
     icon: <MailOutlined />,

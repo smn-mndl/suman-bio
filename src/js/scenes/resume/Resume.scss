@@ -35,6 +35,9 @@
 }
 
 @media only screen and (max-width: 499px) {
+  .app-content-resume {
+    height: calc(100vh - 55px - 40px - 40px) !important;
+  }
   .resume {
     display: flex;
     flex-direction: column;

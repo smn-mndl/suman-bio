@@ -6,8 +6,9 @@ import Resume from "./js/scenes/resume/Resume";
 import { useState } from "react";
 import Services from "./js/scenes/services/Services";
 import Contact from "./js/scenes/contact/Contact";
-
+import Blog from "./js/scenes/blog/Blog";
 import { Route, Routes } from "react-router-dom";
+import BlogPost from "./js/scenes/blogposts/BlogPost";
 
 const App = () => {
   const windowWidth = window.innerWidth;
@@ -33,6 +34,8 @@ const App = () => {
           <Route path="/about" element={<AboutMe />}></Route>
           <Route path="/resume" element={<Resume />}></Route>
           <Route path="/expertise" element={<Services />}></Route>
+          <Route path="/blog" element={<Blog />}></Route>
+          <Route path="/blog/:slug" element={<BlogPost />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/" element={<HomePage />}></Route>
         </Routes>
