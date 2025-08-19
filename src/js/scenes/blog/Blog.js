@@ -1,5 +1,6 @@
 import './Blog.scss';
 import articles from './Articles.json';
+import { Link } from 'react-router-dom';
 
 const Blog = () => {
   return (
@@ -19,14 +20,15 @@ const Blog = () => {
               </div>
               <h2 className="card-title">{article.title}</h2>
               <p className="card-excerpt">{article.excerpt}</p>
-              <a
+              {/* <a
                 href={`blog/${article.link}`}
                 target="_blank"
                 className="read-more"
                 rel="noreferrer"
               >
                 Read More →
-              </a>
+              </a> */}
+              <Link to={`/blog/${article.link}`}>Read More →</Link>
             </article>
           ))}
         </section>

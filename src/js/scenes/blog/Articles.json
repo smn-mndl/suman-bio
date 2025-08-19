@@ -3,7 +3,14 @@
     "title": "Advanced JavaScript Interview Questions",
     "date": "June 24, 2025",
     "tags": ["JavaScript"],
-    "excerpt": "Closures, promises, event loop & more — ace your JavaScript interview...",
+    "excerpt": "Ace your JavaScript interview with closures, promises, event loop & more...",
     "link": "advanced-javascript-interview-questions"
+  },
+  {
+    "title": "How to Host Your Website on Firebase",
+    "date": "August 19, 2025",
+    "tags": ["Firebase", "Hosting", "Web"],
+    "excerpt": "Deploying a static site to Firebase Hosting with the CLI.",
+    "link": "host-website-on-firebase"
   }
 ]
