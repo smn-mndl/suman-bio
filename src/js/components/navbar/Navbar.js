@@ -1,5 +1,5 @@
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { NAVBAR_CONFIG } from "./navbar-config";
 import "./Navbar.scss";
@@ -16,7 +16,7 @@ const Navbar = ({
     window.addEventListener("resize", () => {
       setDropdownOpen(false);
     });
-  }, [windowWidth]);
+  }, [windowWidth, setDropdownOpen]);
   const navbarItems = () => {
     return NAVBAR_CONFIG.map((each) => {
       return (
